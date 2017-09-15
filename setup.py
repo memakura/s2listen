@@ -40,7 +40,16 @@ msi_data = {"Shortcut": shortcut_table}
 build_exe_options = {"packages": ['asyncio'],
                     "excludes": [],
                     "includes": [],
-                    "include_files": ['julius/','images/','00scratch/', 'ThirdPartyLicenses.txt']
+                    "include_files": [
+                        'julius/julius.exe',
+                        'julius/main.jconf',
+                        'julius/am-gmm.jconf',
+                        'julius/model/lang_m',
+                        'julius/model/phone_m',
+                        'images/',
+                        '00scratch/',
+                        'ThirdPartyLicenses.txt'
+                    ]
 }
 #                    "compressed": True
 
