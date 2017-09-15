@@ -124,7 +124,7 @@ class S2Julius:
         self.julius_host = self.helper_host
         self.julius_port = 10500 # port for connecting to julius
         self.julius_proc = None # Julius subprocess handler
-        self.julius_dir = r"julius"
+        self.julius_dir = r".\julius"
         self.julius_exe = "julius.exe"
         self.main_jconf = "main.jconf"
         self.gmm_jconf = "am-gmm.jconf" # for GMM model
