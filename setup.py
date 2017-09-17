@@ -7,7 +7,7 @@ from cx_Freeze import setup, Executable
 
 
 name = "speech2s"
-version = "0.2"
+version = "0.3"
 description = 'Speech to Scratch (Julius speech recognition)'
 author = 'Hiroaki Kawashima'
 url ='https://github.com/memakura/speech2s'
@@ -42,6 +42,10 @@ build_exe_options = {"packages": ['asyncio'],
                     "includes": [],
                     "include_files": [
                         ('julius/julius.exe', 'julius/julius.exe'),
+                        ('julius/adinrec.exe', 'julius/adinrec.exe'),
+                        ('julius/adintool.exe', 'julius/adintool.exe'),
+                        ('julius/adintool-gui.exe', 'julius/adintool-gui.exe'),
+                        ('julius/jcontrol.exe', 'julius/jcontrol.exe'),
                         ('julius/main.jconf', 'julius/main.jconf'),
                         ('julius/am-gmm.jconf', 'julius/am-gmm.jconf'),
                         ('julius/model/lang_m', 'julius/model/lang_m'),
