@@ -1,7 +1,7 @@
 # speech2s
 Speech 2 Scratch (Speech recognition for offline scratch 2 powered by Julius)
 
-## インストーラ版 (Python のインストールが不要)
+## インストーラ版 (Python のインストール不要)
 - [インストールおよびブロックの使用方法はこちら (Wiki)](https://github.com/memakura/speech2s/wiki)
 - [インストーラ (msiファイル) のダウンロードはこちら](https://github.com/memakura/speech2s/releases)
 
@@ -29,7 +29,7 @@ Speech 2 Scratch (Speech recognition for offline scratch 2 powered by Julius)
 1. オプション
     - `-m DNN` (音響モデルをDNNにする．デフォルトはGMM)
     - `-d (数字)` (マイク入力のデバイスを指定する: 何もオプションを指定せずに実行したときにはデフォルトのデバイスが選ばれる)
-    - 指定できるデバイスは，julius が立ち上がる際に表示されるリストから選べます
+    - 指定できるデバイスは，julius が立ち上がる際に表示されるリストから選択可能
 ```デバイス表示例
 STAT: ###### initialize input device
 [start recording]
@@ -42,6 +42,8 @@ Stat: adin_portaudio: sound capture devices:
   10 [Windows DirectSound: マイク配列 (Realtek High Definition Audio)]
   11 [Windows DirectSound: ヘッドセット (SoundBuds Slim Hands-Free)]
 ```
+## 音声入力デバイスの設定
+- [Wiki](https://github.com/memakura/speech2s/wiki) （はじめて使う場合や認識がうまくいかないときは要確認）
 
 ## 音響モデルや言語モデルの差し替え
 1. ./julius/model 内 のファイルを差し替える
