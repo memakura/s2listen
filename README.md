@@ -1,7 +1,7 @@
 # speech2s
 Speech 2 Scratch (Speech recognition for offline scratch 2 powered by Julius)
 
-## インストーラ版
+## インストーラ版 (Python のインストールが不要)
 - [インストールおよびブロックの使用方法はこちら (Wiki)](https://github.com/memakura/speech2s/wiki)
 - [インストーラ (msiファイル) のダウンロードはこちら](https://github.com/memakura/speech2s/releases)
 
