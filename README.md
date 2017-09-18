@@ -1,13 +1,14 @@
 # speech2s
 Speech 2 Scratch (Speech recognition for offline scratch 2 powered by Julius)
 
-## インストーラ版 (Python のインストール不要)
-- [インストールおよびブロックの使用方法はこちら (Wiki)](https://github.com/memakura/speech2s/wiki)
-- [インストーラ (msiファイル) のダウンロードはこちら](https://github.com/memakura/speech2s/releases)
-
 ![speech2s](https://github.com/memakura/speech2s/blob/master/images/ScratchSpeechRecog.png)
 
-以下では Python から実行する場合を説明します．Python をインストールせずに実行する場合は上のインストーラ版をお使いください．
+## インストーラ版はこちら
+Python のインストールが不要です．
+- [インストールおよびブロックの使用方法，マイクの設定方法 (Wiki)](https://github.com/memakura/speech2s/wiki)
+- [インストーラ (msiファイル) のダウンロード](https://github.com/memakura/speech2s/releases)
+
+**以下では Python から実行する場合を説明します．Python をインストールせずに実行する場合は上のインストーラ版をお使いください．**
 
 ## 必要なもの / Requirement
 - Windows 10 (64bit) (Windows 7 や 8でも可?)
