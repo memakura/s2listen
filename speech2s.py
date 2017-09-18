@@ -12,6 +12,7 @@ import os
 import sys
 import subprocess
 import time
+import argparse
 
 import socket
 import xml.etree.ElementTree as ET
@@ -117,7 +118,7 @@ class JuliusClient(asyncio.Protocol):
 
 class S2Julius:
     """ scratch 2 julius """
-    def __init__(self, use_dnn=False):
+    def __init__(self, use_dnn=False, julius_env=""):
         self.helper_host = "127.0.0.1"
         self.helper_port = 50211 # port of this helper
 
@@ -131,7 +132,8 @@ class S2Julius:
         self.dnn_jconf = "am-dnn.jconf" # for DNN model
         self.dnnconf = "julius.dnnconf"
         self.use_dnn = use_dnn
-        self.julius_cmd = "start {0} -module {1} -C {2}".format(
+        self.julius_cmd = julius_env  # for non-default input device
+        self.julius_cmd += "start {0} -module {1} -C {2}".format(
             os.path.join(self.julius_dir, self.julius_exe),
             self.julius_port,
             os.path.join(self.julius_dir, self.main_jconf))
@@ -293,23 +295,39 @@ class S2Julius:
 
         try:
             loop.run_until_complete(asyncio.wait({julius_conn, scratch_server}))
-            loop.run_forever() # loop.stop() まで
+            loop.run_forever() # until loop.stop()
         finally:
             loop.close()
             self.julius_kill()
 
 if __name__ == '__main__':
-    USE_DNN = False
-    if len(sys.argv) > 1:
-        if sys.argv[1] == 'DNN':
-            USE_DNN = True
-            print("speech2s: using DNN")
-        elif sys.argv[1] == 'GMM':
-            USE_DNN = False
-            print("speech2s: using GMM")
-        else:
-            USE_DNN = False # use GMM
-            print("speech2s: no such model: ", sys.argv[1])
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-m", dest="amodel", default="GMM", help="default = GMM [GMM | DNN]")
+    parser.add_argument("-d", dest="device", default="None",
+                        help="default = None [None | (choose device number)]")
+    args = parser.parse_args()
 
-    s2julius = S2Julius(USE_DNN)
+    # set acoustic model
+    USE_DNN = False
+    if args.amodel == 'DNN':
+        USE_DNN = True
+        print("speech2s: using DNN")
+    elif args.amodel == 'GMM':
+        USE_DNN = False
+        print("speech2s: using GMM")
+    else:
+        USE_DNN = False # use GMM
+        print("speech2s: no such model: ", args.amodel)
+        print("use default GMM model")
+
+    # set julius env for non-default audio-input device
+    JULIUS_ENV = ""
+    if args.device != 'None' and args.device.isdigit():
+        if int(args.device) > 0:
+            print("set PORTAUDIO_DEV_NUM= " + args.device)
+            JULIUS_ENV = "(set PORTAUDIO_DEV_NUM={devnum}) && ".format(devnum=int(args.device))
+        else:
+            print("ignore device number: " + args.device)
+
+    s2julius = S2Julius(USE_DNN, JULIUS_ENV)
     s2julius.main()
