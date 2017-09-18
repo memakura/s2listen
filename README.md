@@ -45,7 +45,7 @@ Stat: adin_portaudio: sound capture devices:
 ```
 
 ## 音声入力デバイスの設定
-- はじめて使う場合や認識がうまくいかないときは [Wiki/SetInputDevice.md](https://github.com/memakura/speech2s/wiki/SetInputDevice.md) を確認
+- はじめて使う場合や認識がうまくいかないときは [Wiki/SetInputDevice.md](https://github.com/memakura/speech2s/wiki/SetInputDevice) を確認
 
 ## 音響モデルや言語モデルの差し替え
 1. ./julius/model 内 のファイルを差し替える
