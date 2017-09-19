@@ -31,21 +31,21 @@ Python のインストールが不要です．
     - `-m DNN` (音響モデルをDNNにする．デフォルトはGMM)
     - `-d (数字)` (マイク入力のデバイスを指定する: 何もオプションを指定せずに実行したときにはデフォルトのデバイスが選ばれる)
     - 指定できるデバイスは，julius が立ち上がる際に表示されるリストから選択可能
-```
-STAT: ###### initialize input device
-[start recording]
-Stat: adin_portaudio: audio cycle buffer length = 256000 bytes
-Stat: adin_portaudio: sound capture devices:
-  1 [MME: Microsoft サウンド マッパー - Input]
-  2 [MME: マイク配列 (Realtek High Defini]
-  3 [MME: ヘッドセット (SoundBuds Slim Ha]
-  9 [Windows DirectSound: プライマリ サウンド キャプチャ ドライバー]
-  10 [Windows DirectSound: マイク配列 (Realtek High Definition Audio)]
-  11 [Windows DirectSound: ヘッドセット (SoundBuds Slim Hands-Free)]
-```
+    ```
+    STAT: ###### initialize input device
+    [start recording]
+    Stat: adin_portaudio: audio cycle buffer length = 256000 bytes
+    Stat: adin_portaudio: sound capture devices:
+    1 [MME: Microsoft サウンド マッパー - Input]
+    2 [MME: マイク配列 (Realtek High Defini]
+    3 [MME: ヘッドセット (SoundBuds Slim Ha]
+    9 [Windows DirectSound: プライマリ サウンド キャプチャ ドライバー]
+    10 [Windows DirectSound: マイク配列 (Realtek High Definition Audio)]
+    11 [Windows DirectSound: ヘッドセット (SoundBuds Slim Hands-Free)]
+    ```
 
 ## 音声入力デバイスの設定
-- はじめて使う場合や認識がうまくいかないときは [Wiki/SetInputDevice.md](https://github.com/memakura/speech2s/wiki/SetInputDevice) を確認
+- はじめて使う場合や認識がうまくいかないときは [Wiki/SetInputDevice](https://github.com/memakura/speech2s/wiki/SetInputDevice) を確認
 
 ## 音響モデルや言語モデルの差し替え
 1. ./julius/model 内 のファイルを差し替える
