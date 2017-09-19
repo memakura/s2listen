@@ -45,10 +45,10 @@ Python のインストールが不要です．
     ```
 
 ## 音声入力デバイスの設定
-- はじめて使う場合や認識がうまくいかないときは [Wiki/SetInputDevice](https://github.com/memakura/speech2s/wiki/SetInputDevice) を確認
+- はじめて使う場合や認識がうまくいかないときは [wiki/SetInputDevice](https://github.com/memakura/speech2s/wiki/SetInputDevice) を確認
 
 ## 音響モデルや言語モデルの差し替え
-1. ./julius/model 内 のファイルを差し替える
+1. .\julius\model 内 のファイルを差し替える
 
 ## ライセンス
 - 修正BSD
@@ -68,7 +68,7 @@ Python のインストールが不要です．
 1. Run speech2s.py
 
 ## Add/change htsvoices
-1. Replace files in ./julius/model
+1. Replace files in .\julius\model
 
 ## License
 - New BSD
