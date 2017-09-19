@@ -10,6 +10,9 @@ Python のインストールが不要です．
 
 **以下では Python から実行する場合を説明します．Python をインストールせずに実行する場合は上のインストーラ版をお使いください．**
 
+## 設計方針
+- [対話システム全体の設計方針](https://memakura.github.io/dialogsystem)
+
 ## 必要なもの / Requirement
 - Windows 10 (64bit) (Windows 7 や 8でも可?)
 - Scratch 2 offline editor
