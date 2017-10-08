@@ -1,12 +1,13 @@
-# speech2s.py
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
-#
-# Speech to Scratch
-#  2017.6
-#  Hiroaki Kawashima
-#  Description:
-#    Create one client for connecting to Julius
-#    and one server which accpets scratch requests
+"""
+ Speech to Scratch
+  2017.6
+  Hiroaki Kawashima
+  Description:
+    Create one client for connecting to Julius
+    and one server which accpets scratch requests
+"""
 
 import os
 import sys
