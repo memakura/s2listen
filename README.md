@@ -1,3 +1,5 @@
+[(English)](#English)
+
 # s2listen
 Speech recognition blocks for offline scratch 2 (powered by Julius)
 
@@ -58,6 +60,8 @@ Python のインストールが不要です．
 - Julius関連は ThridPartyLicenses.txt に従います．
 
 ----
+
+<a name="English">
 
 ## Demo
 1. Run scratch 2 (offline)
