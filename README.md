@@ -1,4 +1,4 @@
-[(English)](#English)
+[(English)](#English) [(音声入力デバイスの設定)](https://github.com/memakura/s2listen/wiki/SetInputDevice) [(他の拡張ブロック)](https://memakura.github.io/dialogsystem/)
 
 # s2listen
 Speech recognition blocks for offline scratch 2 (powered by Julius)
@@ -6,11 +6,11 @@ Speech recognition blocks for offline scratch 2 (powered by Julius)
 ![s2listen](https://github.com/memakura/s2listen/blob/master/images/ScratchSpeechRecog.png)
 
 ## インストーラ版はこちら
-Python のインストールが不要です．
-- [インストールおよびブロックの使用方法，マイクの設定方法 (Wiki)](https://github.com/memakura/s2listen/wiki)
+Python のインストールが不要です。
+- [インストールおよびブロックの使用方法、マイクの設定方法 (Wiki)](https://github.com/memakura/s2listen/wiki)
 - [インストーラ (msiファイル) のダウンロード](https://github.com/memakura/s2listen/releases)
 
-**以下では Python から実行する場合を説明します．Python をインストールせずに実行する場合は上のインストーラ版をお使いください．**
+**以下では Python から実行する場合を説明します。Python をインストールせずに実行する場合は上のインストーラ版をお使いください。**
 
 ## 設計方針
 - [対話システム全体の設計方針](https://memakura.github.io/dialogsystem)
@@ -20,7 +20,7 @@ Python のインストールが不要です．
 - Scratch 2 offline editor
 - Python 3.5 (64bit)
     - aiohttp (pip install aiohttp しておく)
-- さらに，julius/model 以下の大きなファイルのダウンロードには [git lfs](https://git-lfs.github.com/) が必要
+- さらに、julius/model 以下の大きなファイルのダウンロードには [git lfs](https://git-lfs.github.com/) が必要
 
 ## デモ
 1. Scratch 2 (offline) を立ち上げる
@@ -33,9 +33,9 @@ Python のインストールが不要です．
 1. 00scratch/s2listen_JA.s2e を開く
 1. s2listen.py を実行する
 1. オプション
-    - `-m DNN` (音響モデルをDNNにする．デフォルトはGMM)
+    - `-m DNN` (音響モデルをDNNにする。デフォルトはGMM)
     - `-d (数字)` (マイク入力のデバイスを指定する: 何もオプションを指定せずに実行したときにはデフォルトのデバイスが選ばれる)
-    - 指定できるデバイスは，julius が立ち上がる際に表示されるリストから選択可能
+    - 指定できるデバイスは、julius が立ち上がる際に表示されるリストから選択可能
     ```
     STAT: ###### initialize input device
     [start recording]
@@ -57,7 +57,7 @@ Python のインストールが不要です．
 
 ## ライセンス
 - 修正BSD
-- Julius関連は ThridPartyLicenses.txt に従います．
+- Julius関連は ThridPartyLicenses.txt に従います。
 
 ----
 
